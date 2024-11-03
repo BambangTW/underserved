@@ -33,10 +33,10 @@ module tb ();
   tt_um_underserved user_project (
 
       // Include power ports for the Gate Level test:
-`ifdef GL_TEST
-      .VPWR(1'b1),
-      .VGND(1'b0),
-`endif
+// `ifdef GL_TEST
+//       .VPWR(1'b1),
+//       .VGND(1'b0),
+// `endif
 
       .ui_in  (ui_in),    // Dedicated inputs
       .uo_out ({uo_out[7:5], gpio4, gpio3, gpio2, gpio1, gpio0}),   // Dedicated outputs
